@@ -1,0 +1,285 @@
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v13-cyrillic_latin-regular.woff2') format('woff2'); 
+}
+
+
+html{
+  box-sizing: border-box;   /*  наследуется от родиеля(html) */
+  
+}
+
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+body{
+  font-family: "Inter", sans-serif; /* если Inter не подгрузится, то загрузится какойнибудь(системный) из семества sans-serif  */
+  background-color: #fff;
+  font-size: 20px;
+  line-height: 1.24;
+  color: #1d1c1d;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none; 
+  color: inherit;
+}
+
+
+img{
+  max-width: 100%;    /* чтоб картинка ен выпаадла из блока родителя */
+  height: auto;  /*  чтоб картинка не расятягивалась/не сужалась, чтобы высота неменялас пропорционально ширине*/
+}
+
+p{
+  margin: 0;
+}
+
+h1, h2, h3{
+  margin: 0;
+}
+
+.container{
+  max-width: 1400px; /* 1300+(padding-left + padding-right)*/
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+
+.header{
+  width: 100%;
+  padding: 0 24px;
+  position: absolute;
+  top: 24px;
+  left: 50%;          /*  margin: 0 auto не сработает тк абсолютное позици-ие, поэтому юзаем  свойсвтва left и transform  */
+  transform: translateX(-50%);  /* вернем назад то что сдвинули  с помощью left: 50% */
+  color: #fff;
+}
+
+
+.header__container{
+  max-width: 1392px;  /* ширина контента */
+  padding: 12px 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(60px);
+  background: rgba(108, 185, 171, 0.7);
+}
+
+
+.header __logo-link {
+    font-size: 0;  /* чтобы  у .svg убрать нижнюю полоску */
+}
+
+.header__logo {
+}
+
+.header__nav {
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.header__menu-item {
+}
+
+.header__menu-link {
+    
+}
+
+.header__cart-link {
+    width: 28px;
+    height: 28px;
+    color: #64099b;
+    font-size: 12px;
+    background-image: url('/img/bag.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 10px 4px 3px; /* чтобы отцентровать цифру */
+}
+
+
+.promo{
+  background-color: #6cb9ab;
+  color: #fff;
+}
+
+.promo__container {
+    padding-top: 210px;
+    padding-bottom: 80px;
+    background-image: url('/img/hero.png');
+    background-position: right 183px bottom 0;
+    background-repeat: no-repeat;
+}
+
+.promo__title {
+  max-width: 788px;
+  margin-bottom: 60px;
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 1.1;
+  
+}
+
+.promo__link {
+  display: inline-block;
+  padding: 16px 24px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+
+.products{
+  padding: 100px 0;
+}
+
+.products__container {
+}
+
+.products__title {
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 1.1;
+  color: #64099b;
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+
+
+
+.product {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  /* padding: 24px; */
+  background-color: #f2f9f7;
+  font-size: 0;  /* чтобы убрать нижний оступ у картинки */
+  color: #1d1c1d;
+}
+
+.product__image {
+  width: 100%;
+}
+
+.product__content{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* бует занимтаь все оставшее простанство */ 
+  padding: 40px 24px 24px 24px;
+}
+
+.product__title {
+  flex-grow: 1;     /* бует занимтаь все оставшее простанство */ 
+  margin-bottom: 4px;
+  font-size: 24px;
+  overflow: hidden;  /* все что не вместится обрежется */
+  text-overflow: ellipsis; /* многоточия */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 2 строки только будут отображаться  */
+  -webkit-box-orient: vertical;
+}
+
+.product__price {
+  font-size: 20px;
+}
+
+
+
+.footer {
+  padding: 60px 0;
+  background-color:  #6cb9ab;
+  color: #fff;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(2, max-content); /* ширина колонки будет зависеть от контента */
+  justify-content: space-between;
+  gap: 38px; 
+}
+
+.footer__logo-link {
+  }
+
+.footer__logo {
+  }
+
+.footer__nav {
+  }
+
+.footer__menu {
+  display: flex;
+  gap: 50px;
+  }
+
+.footer__menu-item {
+  }
+
+.footer__menu-link {
+  }
+
+.footer__info {
+  }
+
+.footer__copyright {
+  margin-bottom: 16px;
+  }
+
+.footer__developers {
+  }
+
+.footer__developer {
+  }
+
+.footer__developer-link {
+  }
+
+.footer__contacts { /* грид элемент */
+  align-self: end;
+}
+
+.footer__email {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__social-item {
+  }
+
+.footer__social-link {
+  }
+
+
