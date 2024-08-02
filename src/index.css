@@ -72,8 +72,8 @@ h1, h2, h3{
 
 
 .header__container{
-  max-width: 1392px;  /* ширина контента */
-  padding: 12px 46px;
+  max-width: 1352px;  /* ширина контента */
+  padding: 12px 26px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -170,12 +170,9 @@ h1, h2, h3{
   gap: 20px;
 }
 
-
-
-
-
 .product {
   min-height: 600px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   /* padding: 24px; */
@@ -283,3 +280,121 @@ h1, h2, h3{
   }
 
 
+
+
+@media(max-width: 1240px){ /* от декстопа уменьшаем */
+
+  .container{
+    padding:  0 42px;
+  }
+
+  .header{
+    padding: 0 20px;
+    top: 12px;
+  }
+  
+  .header__container{
+    padding: 12px 22px;
+  }
+
+
+  .promo__container {
+      padding-top: 172px;
+      padding-bottom: 60px;
+      background-position: right 90px bottom 0;
+      background-image: url('/img/hero_tablet.png');
+  }
+  
+  .promo__title {
+    max-width: 620px;
+    margin-bottom: 40px;
+    font-size: 70px;
+  }
+
+  .product {
+    min-height: 450px;
+  }
+
+  .footer__menu{
+    gap: 32px;
+  }
+}
+
+
+
+@media(max-width: 940px){
+
+  .header__logo{
+    width: 78px;
+  }
+
+  .header__menu{
+    gap: 24px;
+  }
+
+  .header__menu-link{
+    font-size: 16px;
+  }
+
+  .promo__container{
+    padding-top: 157px;
+    background-size: 203px;
+    background-position: right 42px bottom;
+  }
+
+  .promo__title{
+    max-width: 460px;
+    font-size: 54px;
+  }
+
+  .promo__link{
+    padding: 12px 18px;
+    font-size: 16px;
+  }
+
+  .products{
+    padding: 80px 0;
+  }
+
+  .product__title{
+    margin-bottom: 24px;
+    font-size: 36px;
+  }
+
+  .products__list{
+    gap: 16px;
+  }
+
+  .product{
+    min-height: 360px;
+  }
+
+  .product__title{
+    font-size: 20px;
+  }
+
+  .product__price{
+    font-size: 16px;
+  }
+
+  .footer{
+    padding: 40px 0;
+  }
+
+  .footer__menu{
+    gap: 24px;
+  }
+
+  .footer__menu-link{
+    font-size: 16px;
+  }
+
+  .footer__info{
+    font-size: 12px;
+  }
+
+  .footer__email{
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+}
